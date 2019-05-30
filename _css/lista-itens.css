@@ -1,0 +1,134 @@
+/* 
+    Created on : 20/05/2019, 18:03:32
+    Author     : Jefferson V.
+*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.list-group{
+	padding: 0;
+	text-align: center;
+}
+
+.list-group h6{
+	margin: 0;
+	
+}
+
+.list-group p{
+	color: grey;
+	margin: 0;
+	
+}
+
+.list-group #preco{
+	color: green;
+	font-weight: bold;
+	margin: 0;
+	width: 30%;
+        float: right;
+        text-align: right;
+}
+
+
+
+.list-group img{
+	height: 100px;
+	vertical-align: middle;
+}
+
+.list-group button{
+	float: left;
+	padding: 5px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+input.btn
+{
+	width:auto;
+	cursor:pointer;
+}
+
+.fontzero
+{
+	font-size:0;
+}
+
+.content
+{
+	float: left;
+	width: 92%;
+	margin: 0 4%;
+	padding: 10px 0;
+}
+
+header, main, section, footer
+{
+	position:relative;
+	float:left;
+	width:100%;
+}
+
+.main_header_logo
+{
+	float:left;
+	padding-top: -5px;
+}
+
+.main_header_logo img
+{
+	height:50px;
+}
+
+section > .content > .title
+{
+	text-align: center;
+	padding: 10px 0;
+	font-size:1.2em;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+
+section.destaques
+{
+	min-height: 30vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+.mobile_btn
+{
+	position:fixed;
+	width:46px;
+	height:46px;
+	margin:10px;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	left:100%;
+	margin-left: -56px;
+	cursor:pointer;
+	background: #eee url(../_img/hambutton.png) center center no-repeat;
+	background-size: 75%;
+	box-shadow: 0px 0px 5px black;
+}
+
+.mobile_btn.active,
+.mobile_btn:hover
+{
+	background-color: #fff;	
+}
+

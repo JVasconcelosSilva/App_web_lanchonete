@@ -1,0 +1,80 @@
+/* 
+    Created on : 20/05/2019, 18:04:29
+    Author     : Jefferson V.
+*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.list-group{
+    padding: 0;
+    text-align: center;
+}
+
+.list-group h6{
+    margin: 0;
+
+}
+
+.list-group p{
+    color: grey;
+    margin: 0;
+
+}
+
+.list-group #preco{
+    text-align: left;
+    color: grey;
+    margin: 0;
+}
+
+.list-group #preco1{
+    color: black;
+    font-weight: bold;
+    float: left;
+}
+.list-group #total{
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.list-group img{
+    height: 100px;
+    vertical-align: middle;
+}
+
+.list-group button{
+    float: left;
+    padding: 5px;
+}
+
+.finalizar {
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.content
+{
+    float: left;
+    width: 92%;
+    margin: 0 4%;
+    padding: 10px 0;
+}
+
+header, main, section, footer
+{
+    position:relative;
+    float:left;
+    width:100%;
+}

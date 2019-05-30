@@ -1,0 +1,218 @@
+/* 
+    Created on : 22/05/2019, 10:48:44
+    Author     : Jefferson V.
+*/
+header
+{
+	background: #8B4513;
+	height: 70px;
+	
+}
+
+.mobile_btn
+{
+    position:fixed;
+    width:46px;
+    height:46px;
+    margin:10px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    left:100%;
+    margin-left: -56px;
+    cursor:pointer;
+    background: #eee url(../_img/hambutton.png) center center no-repeat;
+    background-size: 75%;
+    box-shadow: 0px 0px 5px black;
+}
+
+.mobile_btn.active,
+.mobile_btn:hover
+{
+    background-color: #fff;	
+}
+
+@media(max-width:999px)
+{
+
+    .menu
+    {
+        position:fixed;
+        top:0;
+        width:50%;
+        height:100%;
+        min-width: 200px;
+        max-width: 360px;
+        background-color:#D2691E;
+        z-index:999;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .menuClosed
+    {
+        left:-100%;
+    }
+
+    .menuOpened
+    {
+        left:0;
+    }
+
+    .menuOpened li
+    {
+        float: left;
+        width: 100%;
+        position: relative;
+    }
+
+    .menuOpened > li > a
+    {
+        float:left;
+        width:100%;
+        padding:15px;
+        text-transform: uppercase;
+        text-decoration:none;
+        color:#eee;
+        font-weight: bold;
+        font-size: 0.875em;
+    }
+
+    .menuOpened > li:hover,
+    .menuOpened > li > a:hover
+    {
+        background:#444;
+        color:fff;
+    }
+
+    .subnav
+    {
+        float:left;
+        width:100%;
+        padding:10px;
+
+    }
+
+    .subnav li
+    {
+        float:left;
+        width:100%;
+    }
+
+}
+
+.subnav li a
+{
+    float:left;
+    width:100%;
+    padding:15px;
+    text-transform: uppercase;
+    text-decoration:none;
+    color:#fff;
+    font-size: 0.8em;
+}
+
+.subnav li a:hover
+{
+    background-color: #222;
+    color:#eee;
+}
+
+@media (min-width: 480px)
+{
+
+}
+
+@media (min-width: 600px)
+{
+
+}
+
+@media (min-width: 1000px)
+{
+    header
+    {
+        height:150px;
+    }
+
+    .main_header_logo
+    {
+        position:absolute;
+        background-color: #fff;
+        border:5px solid #1D0044;
+        top:60px;
+        text-align:center;
+        padding:20px;
+        z-index:999;
+    }
+
+    .mobile_btn
+    {
+        display:none;
+    }
+
+    .menu
+    {
+        position:absolute;
+        z-index:999;
+        width:100%;
+        text-align:right;
+        margin-top:100px;
+    }
+
+    .menu > li
+    {
+        position:relative;
+        display: inline-block;
+        margin-right:10px;
+    }
+
+    .menu > li > a
+    {
+        float:left;
+        padding:10px;
+        text-transform: uppercase;
+        color:#fff;
+        font-size:0.9em;
+        font-weight: bold;
+    }
+
+    .menu li:hover,
+    .menu li > a:hover
+    {
+        background-color: #3295AE;
+    }
+
+    .subnav
+    {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:300%;
+        background:#3295AE;
+        padding:10px;
+        text-align: left;
+        z-index: 99;
+    }
+
+    .subnav li >a:hover
+    {
+        background-color: #fff;
+        color:#3295AE;
+    }
+
+    .menu li:hover .subnav,
+    .menu li > a:hover .subnav
+    {
+        display:block;
+    }
+
+    .subnav li
+    {
+        float:left;
+        width:50%;
+        text-align: center;
+    }
+}
+

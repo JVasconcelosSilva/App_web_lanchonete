@@ -1,0 +1,56 @@
+/* 
+    Created on : 20/05/2019, 17:59:51
+    Author     : Jefferson V.
+*/
+.login {
+	height: 5em;
+    position: relative;	
+	}
+.login form  {
+	position: absolute;
+	top: 120%;
+	left: 10%;
+	min-width: 300px;
+	 }
+.login img{
+	max-width: 300px;
+}
+ 
+ .cadastrar{
+	position: absolute;
+	top: 120%;
+	left: 10%;
+	min-width: 300px;
+}
+
+h6{
+	text-align: center;
+}
+
+.facebook{
+	background-color: #3C5A99;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 40px;
+	padding-right: 40px;
+	color: white;
+}
+
+
+.gmail{
+	background-color: #B23121;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 53px;
+	padding-right: 53px;
+	color: white;
+}
+
+.googlemail{
+	margin: 0px;
+}
+
+.ops{
+	text-align: center; 
+}
+

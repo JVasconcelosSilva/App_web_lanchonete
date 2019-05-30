@@ -1,0 +1,176 @@
+/* 
+    Created on : 20/05/2019, 18:02:39
+    Author     : Jefferson V.
+*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.row.col-12{
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.item1.col-6{
+	padding-right: 2.5px;
+	padding-left: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+.item2.col-6{
+	padding-right: 0px;
+	padding-left: 2.5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+
+.list-group-item.list-group-item-action.cardapio{
+	background: #8B4513;
+	color: white;
+}
+
+.saladas.col-6{
+	padding-right: 2.5px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	
+}
+.kingjr.col-6{
+	padding-right: 0px;
+	padding-left: 2.5px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	
+}
+
+.sobremesas.col-6{
+	padding-right: 2.5px;
+	padding-left: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+.bebidas.col-6{
+	padding-right: 0px;
+	padding-left: 2.5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+
+.list-group.lista{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+}
+
+.list-group h6{
+	margin: 0;
+	
+}
+
+.list-group p{
+	color: grey;
+	margin: 0;
+	
+}
+
+.list-group #preco{
+	color: green;
+	font-weight: bold;
+	margin: 0;
+	width: 20%;
+}
+
+/*IMAGENS DO MENU*/
+.list-group img{
+        width: 110px;
+	height: 100px;
+	vertical-align: middle;
+}
+#img-promocao{
+    width: 160px;
+}
+
+.list-group button{
+	float: left;
+	padding: 5px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+input.btn
+{
+	width:auto;
+	cursor:pointer;
+}
+
+.fontzero
+{
+	font-size:0;
+}
+
+.content
+{
+	float: left;
+	width: 92%;
+	margin: 0 4%;
+	padding: 10px 0;
+}
+
+header, main, section, footer
+{
+	position:relative;
+	float:left;
+	width:100%;
+}
+
+
+
+.main_header_logo
+{
+	float:left;
+	padding-top: -5px;
+}
+
+.main_header_logo img
+{
+	height:50px;
+}
+
+section > .content > .title
+{
+	text-align: center;
+	padding: 10px 0;
+	font-size:1.2em;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+
+section.destaques
+{
+	min-height: 30vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+
+
