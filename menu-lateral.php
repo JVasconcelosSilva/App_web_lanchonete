@@ -10,7 +10,7 @@
 
 <ul class="menu menuClosed">
     <li>
-        <a href="pedido.php">PEDIDOS</a>
+        <a href="pedido.php">PEDIDO</a>
     </li>
     <li>
         <a href="carrinho.php">CARRINHO</a>
@@ -49,6 +49,9 @@
                 <a href="menu.php?tipo=bebida">Bebidas</a>
             </li>
         </ul>
+    </li>
+    <li>
+        <a href="editar-usuario.php">ALTERAR DADOS</a>
     </li>
     <li>
         <a href="sair.php">SAIR</a>

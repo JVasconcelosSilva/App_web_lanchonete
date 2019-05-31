@@ -34,17 +34,17 @@ if (!is_null($login)) {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <section class="login">
+        <div class="login">
             <form method="post">
-                <img src="_img/logo.PNG"><br>
+                <img src="_img/logo.PNG" alt="logo OneTouch"><br>
                 <label for="exampleInputEmail1">Login</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="login" required>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="login" required>
                 <br><label for="exampleInputPassword1">Senha</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" name="senha" required>
                 <br><button type="submit" class="btn btn-primary btn-lg btn-block" name="entrar">Entrar</button>
-                <a href="cadastro.php" type="submit" class="btn btn-secondary btn-lg btn-block" name="cadastrar">Cadastrar</a>
+                <a href="cadastro.php" class="btn btn-secondary btn-lg btn-block" id="cadastrar">Cadastrar</a>
                 <br><p><?= $status; ?></p>
             </form>
-        </section>
+        </div>
     </body>
 </html>

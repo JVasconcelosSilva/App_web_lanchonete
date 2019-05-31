@@ -28,34 +28,16 @@ Class Funcoes extends Banco {
         $instrucao = $this->pdo->query("SELECT * FROM $this->nome");
         return $instrucao->fetchAll();
     }
-    
+
     public function deletarItemCarrinho($id_item_carrinho) {
         $instrucao = $this->pdo->query("DELETE FROM $this->nome WHERE id_item_carrinho = $id_item_carrinho");
         return $instrucao->fetchAll();
     }
-    
+    /*BY ANDREW*/
     public function confirmaPedido() {
         $instrucao = $this->pdo->query("DELETE FROM $this->nome");
         return $instrucao->fetchAll();
     }
-    
-//    public function gravarPedido($registro, $id_produto, $nm_produto, $img_ref, $vl_produto, $qt_produto) {
-//        $instrucao = $this->pdo->query("INSERT INTO $this->nome (id_usuario, id_produto, nm_produto, img_ref, vl_produto, qt_produto) VALUES ($registro, $id_produto,'$nm_produto','$img_ref',$vl_produto,$qt_produto)");
-//        return $instrucao->fetchAll();
-//    }
-//    
-//    public function pesquisarPedido($registro) {
-//        $instrucao = $this->pdo->query("SELECT * FROM $this->nome WHERE id_usuario = $registro");
-//        return $instrucao->fetchAll();
-//    }
-
-    /* USADO PARA INSERIR LANCHES NO CARDÁPIO */
-
-//    public function inserir($id, $nome, $descricao, $tipo, $valor, $img)
-//    {
-//        $instrucao = $this->pdo->query("INSERT INTO $this->nome VALUES ($id, '$nome', '$descricao', '$tipo', '$valor', '$img')");
-//        return $instrucao->fetchAll();
-//    }
 
     public function cadastrarUsuario($nome, $cpf, $login, $senha) {
         $instrucao = $this->pdo->query("INSERT INTO $this->nome (login, senha, nome_usuario, cpf) VALUES ('$login', '$senha', '$nome', $cpf)");
@@ -70,11 +52,16 @@ Class Funcoes extends Banco {
             return null;
         }
     }
+
+    public function editarUsuario($id, $nome, $cpf) {
+        $instrucao = $this->pdo->query("UPDATE $this->nome SET nome_usuario = '$nome', cpf = '$cpf' WHERE id_usuario = $id");
+        return $instrucao->fetchAll();
+    }
     
-//    public function pesquisarIdUsuario($usuario) {
-//        $instrucao = $this->pdo->query("SELECT id_usuario FROM $this->nome WHERE login = '$usuario'");
-//        return $instrucao->fetchAll();
-//    }
+    public function deletarUsuario($id) {
+        $instrucao = $this->pdo->query("DELETE FROM $this->nome WHERE id_usuario = $id");
+        return $instrucao->fetchAll();
+    }
 
     public function __get($name) {
         return $this->$name;

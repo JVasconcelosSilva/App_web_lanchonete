@@ -2,6 +2,7 @@
 require 'sessao.php';
 $id_item_carrinho = $_POST['id_item_carrinho'] ?? null;
 $qt = $_POST['qt'] ?? null;
+$item = null;
 $totalItem = null;
 $total = null;
 require 'Banco.php';
@@ -39,6 +40,7 @@ if (!is_null($id_item_carrinho)) {
 
                     <a type="button" class="list-group-item list-group-item-action">
                         <form method="post">
+                            <?=$item = 1?>
                             <h6><?= $produto['nm_produto'] ?></h6><br>
                             <img src="<?= $produto['img_ref'] ?>">
                             <p id="preco"><br>Vl. Unit. R$ <?= number_format($produto['vl_produto'], 2, ',', '.') ?></p>
@@ -52,12 +54,16 @@ if (!is_null($id_item_carrinho)) {
                 <?php endforeach; ?>
             </div>
             <form action="pagamento.php">
-                <h5 style="margin-left: 10px; margin-top: 10px" id="total" name="total">TOTAL: R$ <?= number_format($total, 2, ',', '.') ?></h5>
-                <input type="hidden" name="total" value="<?= $total ?>"
-                       <hr>
-                <div class="finalizar col-12">
-                    <button type="submit" id="finalizar" type="button" class="btn btn-primary btn-lg btn-block">Adicionar forma de pagamento</button>
-                </div>
+                <?php if (!is_null($item)) { ?>
+                    <h5 style="margin-left: 10px; margin-top: 10px" id="total" name="total">TOTAL: R$ <?= number_format($total, 2, ',', '.') ?></h5>
+                    <input type="hidden" name="total" value="<?= $total ?>"
+                           <hr>
+                    <div class="finalizar col-12">
+                        <button type="submit" id="finalizar" type="button" class="btn btn-primary btn-lg btn-block" >Adicionar forma de pagamento</button>
+                    </div>
+                <?php } else { ?>
+                    <h4 style="text-align: center; margin-top: 20px;">Seu carrinho está vazio</h4>
+                <?php } ?>
             </form>
         </main>
         <?php

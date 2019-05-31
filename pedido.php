@@ -3,6 +3,7 @@ require 'sessao.php';
 $total = $_POST['total'] ?? null;
 $confirma = $_POST['confirma'] ?? null;
 
+
 require 'Banco.php';
 require 'Funcoes.php';
 $tabela = new Funcoes('carrinho');
@@ -32,18 +33,17 @@ if (!is_null($confirma)) {
             </div>
         </header>
         <main>
-
+            <?php if (!is_null($total)) { ?>
             <div class="pedido col-12">
                 <div class="npedido">
                     <h6>n° do pedido</h6>
-                    <h1>APP034</h1>
+                    <h1>APP0<?= rand(001, 999) ?></h1>
                     <p>Acompanhe no painel do restaurante, quando este número aparecer significa que seu pedido está pronto!</p>
                 </div>
             </div>
 
             <div class="list-group">
                 <?php foreach ($registros as $produto): ?>
-
                     <a type="button" class="list-group-item list-group-item-action">
                         <form method="post">
                             <h6><?= $produto['nm_produto'] ?></h6><br>
@@ -58,7 +58,7 @@ if (!is_null($confirma)) {
             </div>
             <form method="post">
                 <h5 style="margin-left: 10px; margin-top: 10px" id="total" name="total">TOTAL: R$ <?= number_format($total, 2, ',', '.') ?></h5>
-                
+
                 <input type="hidden" name="confirma" value="confirma">
                 <hr>
                 <div class="finalizar col-12">
@@ -66,6 +66,9 @@ if (!is_null($confirma)) {
                     <button type="submit" id="finalizar" type="button" class="btn btn-primary btn-lg btn-block">Confirmar pedido</button>
                 </div>
             </form>
+            <?php } else { ?>
+                    <h4 style="text-align: center; margin-top: 20px;">Nenhum pedido feito ainda</h4>
+                <?php } ?>
         </main>
         <?php
         include 'menu-lateral.php';
